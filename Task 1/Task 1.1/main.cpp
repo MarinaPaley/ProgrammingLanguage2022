@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES // for C++
+#include <cmath>
 #include <iostream>
 
 /**
@@ -30,4 +32,14 @@ int main()
         << ", y = " << y << ", z = " << z;
     std::cout << std::endl;
     return 0; // Это однострочный комментарий. Код ошибки
+}
+
+double GetA(const double x, const double y)
+{
+    return 2 * cos(x - M_PI / 6) / (1.0 / 2 + sin(y) * sin(y));
+}
+
+double GetB(const double z)
+{
+    return (1 + z * z / (3 + z * z / 5));
 }
